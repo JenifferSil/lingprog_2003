@@ -14,21 +14,61 @@ void q2()
 {
 int produto;
 produto = 30 * 27;
-   printf("produto: %d",produto);
+   printf("produto: %d\n",produto);
 }
 //3. Faça um programa que imprima a média aritmética entre os números 5, 8, 12.
 void q3()
 {
-    
+ int mda;
+
+ mda = (5+8+12)/3.0;
+ printf("A média Aritimética será: %d", mda); 
 }
 
 //4. Faça um programa que leia e imprima um número inteiro.
+void q4 ()
+{
+ int num;
+ printf("Me informe um número inteiro:");
+ scanf("%d",&num);
+ printf("O Número inteiro será: %d\n", num); 
+}
 
 //5. Faça um programa que leia dois números reais e os imprima.
+void q5 ()
+{
+ int num1,num2;
+ printf("Me Informe dois números:");
+ scanf("%d %d", &num1,&num2);
+ printf("OS dois números será: %d\n %d\n", num1,num2);   
+}
+
 //6. Faça um programa que leia um número inteiro e imprima o seu
 //   antecessor e o seu sucessor.
+void q6()
+{
+ int num,ant,suc;
+ printf("Me informe um número inteiro:");
+ scanf("%d",&num);
+ ant=num-1;
+ suc=num+1;
+ printf("Antecessor: %d\nSucessor: %d\n",ant,suc);
+ }
+
 //7. Faça um programa que leia o nome o endereço e o telefone de
 //   um cliente e ao final, imprima esses dados.
+void q7()
+{
+char nome[30], end[30], tel[10];
+
+printf("Me infoerme seu nome:");
+scanf("%s", &nome);
+printf("Me informe seu endereço:");
+scanf("%s", &end);
+printf("Me informe seu telefone:");
+scanf("%s", &tel);
+printf("Nome:%s\nEndereço:%s\nTelefone:%s",nome,end,tel);
+}
 //8. Faça um programa que leia dois números inteiros e imprima a
 //   subtração deles.
 //9. Faça um programa que leia umnúmero real e imprima ¼ deste número.
@@ -81,6 +121,6 @@ void q3()
 //    necessário também ler o valor da cotação do dólar.
 int main() 
 {
-    q2();
+    q7();
     return EXIT_SUCCESS;
 }
