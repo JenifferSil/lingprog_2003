@@ -89,8 +89,15 @@ void questao06() {
 	int sal,prest;
 	printf("Me informe o salário:");
 	scanf("%d", &sal);
-	printf("Me informe")
 
+	printf("Me informe a prestação:");
+	scanf("%d", &prest);
+
+	if(prest>(sal*0.3))
+{
+	printf("não será possível");
+}   else
+    printf("será possível");
 }
 
 //7. Faça um programa que leia um número e indique se o número está compreendido
@@ -238,6 +245,6 @@ void questao25() {
 }
 	int main()
 	{
-		questao05 ();
+		questao06();
 	return EXIT_SUCCESS;
 }
