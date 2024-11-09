@@ -6,80 +6,78 @@ EXERCÍCIOS DO CAPÍTULO 2
 #include <stdlib.h>
 #include <math.h>
 
-void exemploSe() {
-	float media = 5.0; 
-	if (media >= 6) {  // SE (CONDICAO)
-		printf("APROVADO");
-	} else {	// SENAO
-		if (media >=3) {
-			printf("PROVA FINAL");
-		} else {
-			printf("REPROVADO");
-		}
-	}
-}
-
-// Operadores Lógicos E && e OU ||
-void exemploSe2() {
-	float media = 5.0; 
-	if (media >= 6) {  // SE (CONDICAO)
-		printf("APROVADO");
-	}
-	if (media >=3 && media < 6) {
-			printf("PROVA FINAL");
-	}
-	if (media < 3) {
-		printf("REPROVADO");
-	}
-}
-
-void exemploCaso() {
-	int opcaoMenu = 1;
-	switch (opcaoMenu) {
-		case 1:
-			printf("Você escolheu opção 1");
-			break;
-		case 2:
-			printf("Você escolheu opção 2");
-			break;
-		default:
-			printf("Você escolheu nem a 1 e nem a 2");
-			break;		
-	}
-}
-
 //1. Faça um programa que leia dois valores numéricos inteiros e efetue a adição, caso o resultado seja maior que 10, apresentá-lo.
 void questao01() {
 
     int n1,n2,soma;
+	
     printf("Me informe um valor:");
     scanf("%d",&n1);
     printf("Me informe um valor:");
     scanf("%d",&n2);
     soma=n1+n2;
     if(soma > 10)
-    printf("O valor da Adição será:" "%d",soma);
+    printf("O valor da Adição será:%d",soma);
 }
 
-//2. Faça um programa que leia dois valores inteiros e efetue a adição. Caso o valor somado seja maior que 20, este deverá ser apresentado somando-se a ele mais 8, caso o valor somado seja menor ou igual a 20, este deverá ser apresentado subtraindo-se 5.
+//2. Faça um programa que leia dois valores inteiros e efetue a adição. 
+//Caso o valor somado seja maior que 20, este deverá ser apresentado somando-se a ele mais 8, 
+// caso o valor somado seja menor ou igual a 20, este deverá ser apresentado subtraindo-se 5.
 void questao02() {
-    int 
+    int num1,num2,adicao;
 
+	printf("Me informe dois números:");
+	scanf("%d %d", &num1,&num2);
+	adicao=num1+num2;
+if(adicao>20)
+{
+	adicao+=8;
+}
+else
+{
+	adicao-=5;
+}
+    printf("%d",adicao);
 }
 
-//3. Faça um programa que leia um número e imprima uma das duas mensagens: "É múltiplo de 3"ou "Não é múltiplo de 3".
+//3. Faça um programa que leia um número e imprima uma das duas mensagens: 
+//"É múltiplo de 3"ou "Não é múltiplo de 3".
 void questao03() {
+	int num;
+	printf("Me informe um número:");
+	scanf("%d",&num);
 	
+	if((num % 3)== 0)
+printf("O número é múltiplo por 3");
+
+else
+printf("O número não é múltiplo por 3");
 }
 
 //4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
 void questao04() {
-	
+	int num;
+	printf("Me informe um número");
+scanf("%d",&num);
+
+if((num % 5) == 0)
+printf("O número é divisivel por 5");
+
+else 
+printf("O número não é divisivel por 5");			
 }
 
 //5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
 void questao05() {
+	int num;
+	printf("Me informe um número:");
+scanf("%d", &num);
 
+if((num % 5) == 0)
+printf("O número é divisivel por 3 e por 7");
+
+else
+printf("O número não é divisivel por 3 e por 7");
 }
 
 //6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
@@ -87,6 +85,11 @@ void questao05() {
 //bruto. Faça um programa em linguagem C que permita entrar com o salário bruto e o
 //valor da prestação e informar se o empréstimo pode ou não ser concedido.
 void questao06() {
+
+	int sal,prest;
+	printf("Me informe o salário:");
+	scanf("%d", &sal);
+	printf("Me informe")
 
 }
 
@@ -232,31 +235,9 @@ void questao24() {
 //0,4 1º e 2º grupos
 //0,5 1º, 2º e 3º grupos
 void questao25() {
-	
 }
-
-int main() {
-	const char menu[1000] = "\n================================\n            PROGRAMAS\n================================\n[1]  - Adição\n[2]  - Adição 2\n[3]  - Múltiplo\n[4]  - Múltiplo 2\n[5]  - Múltiplo 3\n[6]  - Crédito\n[7]  - Intervalo\n[8]  - Menor/Maior\n[9]  - Idade\n[10] - Crescente\n[11] - Maior\n[12] - Idade 2\n[13] - Situação Aluno\n[14] - INSS\n[15] - Valor de Venda\n[16] - Natação\n[17] - Plano de Saúde\n[18] - Mês do Ano\n[19] - Arco e Flecha\n[20] - Crédito Especial\n[21] - Biblioteca\n[22] - Consumo Combustível\n[23] - Calorias\n[24] - Emplacamento\n[25] - Intimação\n================================\n";
-	printf("%s",menu);
-	int opcao;
-	printf("Digite a questão a ser executada: ");
-	scanf("%d", &opcao);
-	switch (opcao) {
-		case 1:
-			questao01();
-			break;
-		case 2:
-			questao02();
-			break;
-		case 5:
-			questao05();
-			break;			
-		case 10:
-			questao10();
-			break;
-		default:
-			printf("Opção inválida!");
-	}
-	
+	int main()
+	{
+		questao05 ();
 	return EXIT_SUCCESS;
 }
