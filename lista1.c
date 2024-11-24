@@ -59,19 +59,23 @@ void q6()
 //   um cliente e ao final, imprima esses dados.
 void q7()
 {
-char nome[30], end[30], tel[10];
 
-printf("Me infoerme seu nome:");
-scanf("%s", &nome);
-printf("Me informe seu endereço:");
-scanf("%s", &end);
-printf("Me informe seu telefone:");
-scanf("%s", &tel);
-printf("Nome:%s\nEndereço:%s\nTelefone:%s",nome,end,tel);
 }
 //8. Faça um programa que leia dois números inteiros e imprima a
 //   subtração deles.
-//9. Faça um programa que leia umnúmero real e imprima ¼ deste número.
+void q8()
+{
+    int n1,n2,sub;
+    printf("Me informe dois números:");
+    scanf("%d %d", &n1,&n2);
+    sub=n1-n2;
+    printf("a subtração será: %d", sub);
+}
+//9. Faça um programa que leia um número real e imprima ¼ deste número.
+void q9 ()
+{
+
+}
 //10. Faça um programa que leia três números reais e calcule a
 //    média aritmética destes números. Ao final, o programa deve
 //    imprimir o resultado do cálculo.
@@ -121,6 +125,6 @@ printf("Nome:%s\nEndereço:%s\nTelefone:%s",nome,end,tel);
 //    necessário também ler o valor da cotação do dólar.
 int main() 
 {
-    q7();
+    q8();
     return EXIT_SUCCESS;
 }
