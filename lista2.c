@@ -104,30 +104,103 @@ void questao06() {
 //entre 20 e 50 ou não.
 void questao07() {
 
+int num;
+printf("digite o numero:");
+scanf("%d", &num);
+if (num>=20 && num<= 50);
+printf("numero entre 20 e 50");
+else
+printf("Numero menor que 20 ou maior que 50");
 }
 
 //8. Faça um programa que leia um número e imprima uma das mensagens: 
 //"Maior do que 20", "Igual a 20"ou "Menor do que 20".
 void questao08() {
-	
+	int num;
+	printf("digite o numero:");
+	scanf("%d",%num);
+	if(numero > 20)
+	printf("Numero maior que 20");
+else if (num == 20)
+printf("Numero igual a 20")
+else
+printf("Numero menor que 20");
 }
 
 //9. Faça um programa que permita entrar com o ano de nascimento da pessoa e como ano
 //atual. O programa deve imprimir a idade da pessoa. Não se esqueça de verificar se o
 //ano de nascimento informado é válido.
 void questao09() {
-	
+	int nascimento, anoAtual;
+
+printf("Digite o ano de nascimento:");
+scanf("%d",&nascimento);
+printf("Digite o ano atual:");
+scanf("%d,"&anoAtual);
+if (nascimento > 0 && nascimento <= anoAtual){
+	printf("Sua idade: %d", anoAtual - nascimento);
+	}
+	else
+	printf("Data de nascimento invalida");
 }
 
 //10. Faça um programa que leia três números inteiros e imprima os três em ordem
 //crescente.
 void questao10() {
 
+	int n1,n2,n3;
+
+	printf("Digite o primeiro numero:");
+	scanf("%d", &n1);
+	printf("Digite o segundo numero:");
+	scanf("%d", &n2);
+	printf("Digite o terceiro numero:");
+	scanf("%d", &n3);
+	if (n1<n2 && n1<n3)
+	{
+		if (n2<n3)
+		printf("%d, %d, %d",n1,n2,n3);
+	else
+	printf("%d,%d,%d", n1,n3,n2);
+	}
+
+	else if (n2 < n1 && n2 < n3) {
+		if (n1 < n3)
+		printf("%d,%d,%d", n2,n1,n3);
+	else
+	printf("%d,%d,%d", n2,n1,n3);
+	}
+	else{
+		if (n2 < n1)
+		printf("%d,%d,%d", n3,n2,n1);
+	else
+	printf("%d,%d,%d", n3,n1,n2);
+
+	}	
+
 }
 
 //11. Faça um programa que leia 3 números e imprima o maior deles.
 void questao11() {
 	
+	int n1,n2,n3;
+
+	printf("Digite o primeiro numero:");
+	scanf("%d", &n1);
+	printf("Digite o segundo numero:");
+	scanf("%d", &n2);
+	printf("Digite o terceiro numero:");
+	scanf("%d", &n3);
+	if (n1 > n2 && n1 > n3){
+		printf("Maior numero: %d",n1)
+	}
+	else if (n2 > n1 && n2 > n3){
+		printf("Maior numero: %d",n2);
+		}
+		else {
+			printf("Maior numero: %d",n3);
+		}
+	}
 }
 
 //12. Faça um programa que leia a idade de uma pessoa e informe:
@@ -135,12 +208,43 @@ void questao11() {
 //• Se é menor de idade
 //• Se é maior de 65 anos
 void questao12() {
+
+	int idade;
+
+	printf("Digite a idade:");
+	scanf("%d", &idade);
+	if (idade >= 65)
+	printf("Maior que 65");
+else if (idade >= 18)
+printf("Maior de idade");
+else
+printf("Menor de idade:");
 	
 }
 
 //13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota da
-//prova 2 de umaluno. O programa deve imprimir o nome, a nota da prova 1, a nota da prova 2, a média das notas e uma das mensagens: "Aprovado", "Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para reprovação e as demais em prova final).
+//prova 2 de um aluno. O programa deve imprimir o nome, a nota da prova 1, a nota da prova 2, a média das notas e uma das mensagens: "Aprovado", "Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para reprovação e as demais em prova final).
 void questao13() {
+	
+	float p1,p2,media;
+	char nome[30];
+printf("Nome do aluno:");
+scanf("%s", &nome);
+printf("Digite a nota da prova 1:");
+scanf("%f", &p1);
+printf("Digite a nota da prova 2:");
+scanf("%f", &p2);
+media=(p1+p2)/2;
+printf("---------------DADOS------------");
+printf("Aluno: %s", nome);
+printf("Notas - p1: %f p2: %f", p1,p2);
+printf("Media: %f", media);
+if (media >= 7)
+printf("Aprovado");
+else if (media >= 3)
+printf("Prova Final");
+else
+printf("Reprovado");
 	
 }
 
@@ -152,6 +256,16 @@ void questao13() {
 //Maior que R$1200,00 e menor ou igual a R$2000,00 25%
 //Maior que R$2000,00 30%
 void questao14() {
+
+	int salario;
+	print("Digite o seu salario:")
+	scanf("%d", &salario);
+	if (salario<=600)
+	printf ("Isento de INSS");
+else if (salario <= 1200)
+printf("20%: %.2f", salario * 0.2);
+else if (salario <= 2000)
+printf
 	
 }
 
